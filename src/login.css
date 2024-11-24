@@ -1,0 +1,145 @@
+/* Overall App Container */
+.App {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Vibrant gradient background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default Login Container */
+.login-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out,
+    width 0.3s ease-in-out;
+  padding-right: 50px;
+}
+
+/* Smaller Login Form when Camera is Active */
+.login-container.camera-active {
+  width: 250px; /* Shrink width */
+  padding: 15px; /* Reduce padding */
+}
+
+/* Login Header */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333333;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #6a11cb; /* Match with background gradient */
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.capture-button,
+.capture-image-button,
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Matching gradient */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+}
+
+.capture-button:hover,
+.capture-image-button:hover,
+.submit-button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb); /* Inverted gradient */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+/* Webcam and Camera Container */
+.camera-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.webcam-view {
+  width: 100%;
+  border: 2px solid #6a11cb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Captured Image */
+.captured-image img {
+  max-width: 150px; /* Limit the width */
+  max-height: 150px; /* Limit the height */
+  border-radius: 10px;
+  border: 2px solid #2575fc;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.captured-image img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+  }
+
+  .login-container.camera-active {
+    width: 80%; /* Shrink further on smaller screens */
+  }
+
+  .input-field {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .capture-button,
+  .capture-image-button,
+  .submit-button {
+    font-size: 14px;
+  }
+}
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+  color: #0056b3;
+}
